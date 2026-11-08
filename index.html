@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PVT GAMING</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PVT GAMING</h1>
+        <p class="tagline">YOUR WORLD OF GAMING</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#tools">Gaming Tools</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>WELCOME GAMERS!</h2>
+        <p>Discover games, tips and gaming news.</p>
+        <a class="main-btn" href="#games">Explore Games</a>
+    </section>
+
+    <section id="games">
+        <h2>POPULAR GAMES</h2>
+
+        <div class="game-container">
+
+            <div class="game-card">
+                <h3>FREE FIRE</h3>
+                <p>Explore exciting battle royale gaming.</p>
+                <a href="https://ff.garena.com/" class="game-btn">Visit Game</a>
+            </div>
+
+            <div class="game-card">
+                <h3>MINECRAFT</h3>
+                <p>Build, explore and create your world.</p>
+                <a href="https://www.minecraft.net/" class="game-btn">Visit Game</a>
+            </div>
+
+            <div class="game-card">
+                <h3>ROBLOX</h3>
+                <p>Discover amazing games and experiences.</p>
+                <a href="https://www.roblox.com/" class="game-btn">Visit Game</a>
+            </div>
+
+        </div>
+    </section>
+  <section id="tools">
+    <h2>GAMING TOOLS</h2>
+
+    <div class="game-container">
+
+        <div class="game-card">
+            <h3>FREE FIRE SENSITIVITY</h3>
+            <p>Find sensitivity guides for your device.</p>
+            <a href="#sensitivity" class="game-btn">Explore</a>
+        </div>
+
+        <div class="game-card">
+            <h3>CUSTOM HUD GUIDE</h3>
+            <p>Learn about comfortable control layouts.</p>
+            <a href="#hud" class="game-btn">Explore</a>
+        </div>
+
+        <div class="game-card">
+            <h3>CHARACTER COMBINATIONS</h3>
+            <p>Discover character skills and combinations.</p>
+            <a href="#characters" class="game-btn">Explore</a>
+        </div>
+
+    </div>
+  </section>
+  <section id="sensitivity">
+    <h2>FREE FIRE SENSITIVITY</h2>
+
+    <p>Find your recommended settings!</p>
+
+    <label>Select your device:</label>
+
+    <select id="device">
+        <option value="low">Low-end phone</option>
+        <option value="medium">Medium-end phone</option>
+        <option value="high">High-end phone</option>
+    </select>
+
+    <label>Select your playing style:</label>
+
+    <select id="style">
+        <option value="headshot">Headshot</option>
+        <option value="balanced">Balanced</option>
+        <option value="rush">Rusher</option>
+    </select>
+
+    <button onclick="generateSensitivity()">
+        GENERATE SENSITIVITY
+    </button>
+
+    <div id="result"></div>
+  </section>
+  
+<section id="hud">
+    <h2>CUSTOM HUD GUIDE</h2>
+
+    <p>Choose your preferred control setup.</p>
+
+    <label>Select your finger setup:</label>
+
+    <select id="fingers">
+        <option value="2">2 Finger</option>
+        <option value="3">3 Finger</option>
+        <option value="4">4 Finger</option>
+    </select>
+
+    <label>Select your playing style:</label>
+
+    <select id="hudStyle">
+        <option value="rush">Rusher</option>
+        <option value="balanced">Balanced</option>
+        <option value="defensive">Defensive</option>
+    </select>
+
+    <button onclick="generateHUD()">
+        GENERATE HUD GUIDE
+    </button>
+
+    <div id="hudResult"></div>
+</section>
+
+<section id="characters">
+    <h2>CHARACTER COMBINATION GENERATOR</h2>
+
+    <p>Choose your game mode and playing style.</p>
+
+    <label>Select Game Mode:</label>
+    <select id="gameMode">
+        <option value="cs">Clash Squad</option>
+        <option value="br">Battle Royale</option>
+    </select>
+
+    <label>Select Playing Style:</label>
+    <select id="playStyle">
+        <option value="rusher">Rusher</option>
+        <option value="balanced">Balanced</option>
+        <option value="support">Support</option>
+    </select>
+
+    <button onclick="generateCharacters()">
+        GENERATE COMBINATION
+    </button>
+
+    <div id="characterResult"></div>
+</section>
+
+    <section id="about">
+        <h2>ABOUT PVT GAMING</h2>
+        <p>Welcome to PVT GAMING, your gaming destination!</p>
+    </section>
+
+<!-- GAMING NEWS SECTION -->
+<section id="gaming-news">
+    <h2>🔥 GAMING NEWS</h2>
+    <p class="news-subtitle">Stay Updated With The Latest Gaming News</p>
+
+    <div class="news-container">
+
+        <div class="news-card">
+            <div class="news-icon">🎮</div>
+            <h3>Free Fire Updates</h3>
+            <p>Discover new updates, events, characters and features in Free Fire.</p>
+            <span class="news-tag">FREE FIRE</span>
+        </div>
+
+        <div class="news-card">
+            <div class="news-icon">⛏️</div>
+            <h3>Minecraft News</h3>
+            <p>Explore Minecraft updates, new mobs and exciting adventures.</p>
+            <span class="news-tag">MINECRAFT</span>
+        </div>
+
+        <div class="news-card">
+            <div class="news-icon">🏆</div>
+            <h3>Esports News</h3>
+            <p>Discover esports tournaments, competitions and gaming highlights.</p>
+            <span class="news-tag">ESPORTS</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- PVT GAMING LEADERBOARD -->
+<section id="leaderboard">
+
+    <h2>🏆 PLAYER LEADERBOARD</h2>
+    <p class="leader-subtitle">
+        Compete With The Best Players
+    </p>
+
+    <div class="leaderboard-box">
+
+        <h3>🔥 TOP PLAYERS</h3>
+
+        <div class="table-container">
+            <table class="leader-table">
+                <thead>
+                    <tr>
+                        <th>RANK</th>
+                        <th>PLAYER</th>
+                        <th>POINTS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="leaderboardRows">
+                    <tr>
+                        <td>🥇 1</td>
+                        <td>PVTxLegend</td>
+                        <td>9500</td>
+                    </tr>
+                    <tr>
+                        <td>🥈 2</td>
+                        <td>ShadowX</td>
+                        <td>8700</td>
+                    </tr>
+                    <tr>
+                        <td>🥉 3</td>
+                        <td>DarkKiller</td>
+                        <td>7900</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="add-player-title">ADD YOUR SCORE</h3>
+
+        <input
+            type="text"
+            id="playerName"
+            placeholder="Enter gaming name"
+            maxlength="16"
+        >
+
+        <input
+            type="number"
+            id="playerScore"
+            placeholder="Enter points"
+            min="0"
+            max="999999"
+       >   
+<button type="button" onclick="addPlayer()">
+    ADD TO LEADERBOARD
+</button>
+
+        <p id="leaderMessage"></p>
+
+    </div>
+</section>
+
+<!-- PVT GAMING PLAYER PROFILE -->
+
+<section id="player-profile">
+
+    <h2>👤 PLAYER PROFILE</h2>
+    <p class="profile-subtitle">
+        Create Your Gaming Identity
+    </p>
+
+    <div class="profile-box">
+
+        <div class="profile-avatar">🎮</div>
+
+        <h3>CREATE YOUR PROFILE</h3>
+
+        <input
+            type="text"
+            id="profileName"
+            placeholder="Enter gaming username"
+            maxlength="20"
+        >
+
+        <select id="profileGame">
+            <option value="">Choose your game</option>
+            <option>Free Fire</option>
+            <option>Minecraft</option>
+            <option>PUBG Mobile</option>
+            <option>Call of Duty</option>
+            <option>Other</option>
+        </select>
+
+        <input
+            type="number"
+            id="profileLevel"
+            placeholder="Enter player level"
+            min="1"
+            max="100"
+        >
+
+        <textarea
+            id="profileBio"
+            placeholder="Write something about yourself..."
+            maxlength="120"
+        ></textarea>
+
+        <button type="button" onclick="createProfile()">
+            CREATE PROFILE
+        </button>
+
+        <div id="profileResult"></div>
+
+    </div>
+
+</section>
+
+    <footer>
+        <p>© 2026 PVT GAMING. All rights reserved.</p>
+    </footer>
+
+<script>
+function generateSensitivity() {
+
+    const device = document.getElementById("device").value;
+    const style = document.getElementById("style").value;
+
+    const settings = {
+        low: {
+            headshot: [185, 175, 165, 150, 90, 160],
+            balanced: [175, 165, 155, 140, 85, 150],
+            rush: [195, 185, 175, 160, 95, 170]
+        },
+        medium: {
+            headshot: [190, 180, 170, 155, 95, 165],
+            balanced: [180, 170, 160, 145, 90, 155],
+            rush: [198, 188, 178, 165, 100, 175]
+        },
+        high: {
+            headshot: [195, 185, 175, 160, 100, 170],
+            balanced: [185, 175, 165, 150, 95, 160],
+            rush: [200, 190, 180, 170, 105, 180]
+        }
+    };
+
+    const values = settings[device][style];
+
+    document.getElementById("result").innerHTML = `
+        <h3>Your PVT GAMING Settings</h3>
+        <p>General: ${values[0]}</p>
+        <p>Red Dot: ${values[1]}</p>
+        <p>2x Scope: ${values[2]}</p>
+        <p>4x Scope: ${values[3]}</p>
+        <p>Sniper Scope: ${values[4]}</p>
+        <p>Free Look: ${values[5]}</p>
+        <p>These are suggested starting settings.
+        Adjust them through gameplay testing.</p>
+    `;
+}
+  
+function generateHUD() {
+
+    const fingers = document.getElementById("fingers").value;
+    const style = document.getElementById("hudStyle").value;
+
+    const layouts = {
+        "2": "Use your left thumb for movement and right thumb for aiming and other controls.",
+        "3": "Use your left thumb for movement, right thumb for aiming, and an additional finger for a comfortable action button.",
+        "4": "Use two fingers on each side. Practise coordinating movement, aiming and action controls."
+    };
+
+    const styles = {
+        rush: "Keep important action buttons easy to reach.",
+        balanced: "Keep movement and action controls comfortably accessible.",
+        defensive: "Prioritise comfortable aiming and movement controls."
+    };
+
+    document.getElementById("hudResult").innerHTML = `
+        <h3>Your PVT GAMING HUD Guide</h3>
+        <p><b>Finger setup:</b> ${fingers} Fingers</p>
+        <p><b>Layout:</b> ${layouts[fingers]}</p>
+        <p><b>Playing style:</b> ${styles[style]}</p>
+        <p>Practise and adjust your layout to your comfort.</p>
+    `;
+}
+function generateCharacters() {
+  const mode = document.getElementById("gameMode").value;
+  const style = document.getElementById("playStyle").value;
+
+  const combinations = {
+    rusher: ["Tatsuya", "Jota", "Kelly", "Hayato"],
+    balanced: ["Alok", "Moco", "Kelly", "Hayato"],
+    support: ["Alok", "Moco", "Dimitri", "Kelly"]
+  };
+
+  const names = combinations[style];
+  const result = document.getElementById("characterResult");
+
+  result.innerHTML = `
+    <h3>Your Character Combination</h3>
+    <p><b>Mode:</b> ${mode === "cs" ? "Clash Squad" : "Battle Royale"}</p>
+    <p><b>Play Style:</b> ${style.toUpperCase()}</p>
+    <h3>${names.join(" + ")}</h3>
+    <p>Try this combination and adjust it to your gameplay.</p>
+  `;
+  }
+  
+// ===== PVT GAMING LEADERBOARD SYSTEM =====
+
+function addPlayer() {
+    const nameInput = document.getElementById("playerName");
+    const scoreInput = document.getElementById("playerScore");
+    const message = document.getElementById("leaderMessage");
+
+    const name = nameInput.value.trim();
+    const score = Number(scoreInput.value);
+
+    if (!name || scoreInput.value.trim() === "" ||
+        !Number.isSafeInteger(score) || score < 0) {
+        message.textContent = "Please enter a valid name and score!";
+        return;
+    }
+
+    let players = JSON.parse(
+        localStorage.getItem("pvtGamingPlayers") || "[]"
+    );
+
+    players.push({ name: name, score: score });
+
+    players.sort((a, b) => b.score - a.score);
+
+    localStorage.setItem(
+        "pvtGamingPlayers",
+        JSON.stringify(players)
+    );
+
+    displayPlayers();
+
+    nameInput.value = "";
+    scoreInput.value = "";
+    message.textContent = "Player added successfully!";
+}
+
+function displayPlayers() {
+    const rows = document.getElementById("leaderboardRows");
+
+    let players = JSON.parse(
+        localStorage.getItem("pvtGamingPlayers") || "[]"
+    );
+
+    rows.textContent = "";
+
+    players.sort((a, b) => b.score - a.score);
+
+    players.forEach((player, index) => {
+        const tr = document.createElement("tr");
+
+        const rank = document.createElement("td");
+        rank.textContent = index === 0 ? "🥇 1" :
+                           index === 1 ? "🥈 2" :
+                           index === 2 ? "🥉 3" :
+                           "#" + (index + 1);
+
+        const playerName = document.createElement("td");
+        playerName.textContent = player.name;
+
+        const points = document.createElement("td");
+        points.textContent = player.score;
+
+        tr.append(rank, playerName, points);
+        rows.appendChild(tr);
+    });
+}
+
+displayPlayers();
+// ===== PVT GAMING PLAYER PROFILE SYSTEM =====
+
+function createProfile() {
+    const name = document.getElementById("profileName").value.trim();
+    const game = document.getElementById("profileGame").value;
+    const levelValue = document.getElementById("profileLevel").value;
+    const bio = document.getElementById("profileBio").value.trim();
+    const result = document.getElementById("profileResult");
+
+    const level = Number(levelValue);
+
+    if (!name || !game || levelValue === "" ||
+        !Number.isInteger(level) || level < 1 || level > 100) {
+        result.textContent = "Please enter a username, choose a game, and enter a level from 1 to 100.";
+        return;
+    }
+
+    const profile = {
+        name: name,
+        game: game,
+        level: level,
+        bio: bio
+    };
+
+    localStorage.setItem("pvtGamingProfile", JSON.stringify(profile));
+
+    showProfile();
+}
+
+function showProfile() {
+    const result = document.getElementById("profileResult");
+    const savedProfile = localStorage.getItem("pvtGamingProfile");
+
+    if (!savedProfile) return;
+
+    const profile = JSON.parse(savedProfile);
+
+    result.textContent = "";
+
+    const heading = document.createElement("h3");
+    heading.textContent = "🎮 YOUR PLAYER PROFILE";
+
+    const name = document.createElement("p");
+    name.textContent = "Username: " + profile.name;
+
+    const game = document.createElement("p");
+    game.textContent = "Game: " + profile.game;
+
+    const level = document.createElement("p");
+    level.textContent = "Level: " + profile.level;
+
+    const bio = document.createElement("p");
+    bio.textContent = "Bio: " + (profile.bio || "No bio added");
+
+    result.append(heading, name, game, level, bio);
+}
+
+// Show saved profile when the page opens
+showProfile();
+</script>
+
+</body>
+</html>
